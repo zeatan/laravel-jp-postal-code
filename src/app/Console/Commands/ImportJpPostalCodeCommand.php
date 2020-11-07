@@ -52,7 +52,7 @@ class ImportJpPostalCodeCommand extends Command
 
         }
 
-        $converted_csv_path = storage_path('app/csv/postal_code_utf8.csv');
+        $converted_csv_path = config('jp_postal_code.temp_path');
         file_put_contents(
             $converted_csv_path,
             mb_convert_encoding(
